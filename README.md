@@ -1,6 +1,24 @@
-# 5G_Modem_Quectel
+## 🚀 5G Modem Control & Signal Intelligence (Quectel RM520N-GL)
 
-Java software for managing the Quectel RM520N-GL 5G modem and collecting real-time 5G signal metrics.
+Production-oriented Java application designed to control a 5G modem (Quectel RM520N-GL) via AT commands and collect real-time RF signal metrics for analysis and data-driven applications.
+
+This project demonstrates:
+
+- Low-level communication with telecom hardware (serial + AT commands)
+- Real-time acquisition of 5G signal metrics (e.g., RSRP, RSRQ, SINR)
+- Structured data generation for analytics and machine learning pipelines
+- Clean modular architecture for extensibility and maintainability
+
+💡 Typical use cases include:
+- 5G signal quality analysis and benchmarking  
+- RF environment studies and noise evaluation  
+- Dataset generation for machine learning models  
+- Telecom experimentation and prototyping  
+
+---
+
+**Key highlight:** This project bridges software engineering and telecommunications, enabling direct interaction with real 5G hardware and transforming raw RF data into structured datasets.
+
 
 ## Overview
 
