@@ -1,0 +1,35 @@
+Dicas para trabalhar com o modem 5g:
+
+
+Teste: se o UE não consegue ver a célula, diminua atenuação em passos de 10 dB até achar RSRP ~ −70 a −90 dBm.
+
+Se o sinal ficar saturado (desconexões, RSRP muito alto tipo −10 dBm), aumente a atenuação.
+
+Obs.: atenuadores SMA fixos (10/20/30/40 dB) são baratos e seguros para labs.
+
+Bandwidth: use 20 MHz (ou menos) para B210 — combina com limite de amostragem do B210.
+
+gnb.sa.band78.fr1.106PRB.usrpb210.conf  -> um dos arquivos de configuração da RAN 5G OAI.
+
+RSRP muito alto (ex.: −10 a −20 dBm)
+
+Atenuadores SMA fixos: 10 dB, 20 dB, 30 dB, 40 dB (x2–3).
+
+B210: tx_gain = 5, atenuação 40 dB nas duas portas, bandwidth 20 MHz.
+
+Ligue o gNB, faça 1–2 leituras; se RSRP estiver em torno de −70 a −90 dBm, está OK para testes.
+
+aumente att_tx (ex.: 12 → 40) Isso é feito no arquivo : oai_ran_5G/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf
+
+objetivo prático: RSRP em torno de −70 … −90 dBm para segurança/medições; se estiver muito baixo, reduza att_tx (volte para 30 etc.).
+
+Software-only atenuação funciona mas nada substitui atenuadores físicos para proteção do front-end; compre atenuadores SMA (30–40 dB) quando possível.
+
+Não faça grandes saltos: mude att_tx por passos (12 → 30 → 40) e teste.
+
+Um resultado coletado:
+
++QENG: "servingcell","LIMSRV","NR5G-SA","TDD",001,01,000000E00,0,1,641280,78,3,-107,-11,14,1,20   RSRP = -107.  (melhor entre -70 e -90)
+
+
+

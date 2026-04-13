@@ -1,0 +1,10 @@
+Diretórios e arquivos importantes:
+
+oai_ran_5G/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF
+
+./oaisoftware/oai-cn5g-fed/docker-compose/docker-compose-basic-nrf.yaml
+
+
+./oaisoftware/oai-cn5g-fed/docker-compose/database/oai_db.sql
+
+

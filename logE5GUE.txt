@@ -1,0 +1,129 @@
+Script started on 2025-11-21 14:10:58-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="185" LINES="16"]
+[sudo] senha para rodrigopimenta: 
+
+#########################################################################
+Bem-vindo ao sistema de coleta de dados (métricas do sinal 5g) com UE 5G!
+#########################################################################
+
+Tentando abrir porta: /dev/ttyUSB2 @ 115200
+Porta /dev/ttyUSB2 aberta com sucesso.
+
+--- Recebido OK ---
+
+
+-------------------------------------------
+
+Enviado: AT
+
+--- Recebido OK ---
+Teste de comando AT executado com sucesso. Prosseguindo com a coleta...
+
+
+
+-------------------------------------------
+
+Enviado: AT+CMEE=2
+
+--- Recebido OK ---
+Comando Format Error executado com sucesso.
+
+
+-------------------------------------------
+
+Enviado: AT+QSIMSTAT?
+
+--- Recebido OK ---
+Comando SIM Insertion Status Query executado com sucesso.
+SIM card: Inserido
+SimCard habilitado
+
+
+
+-------------------------------------------
+
+Enviado: AT+CPIN?
+
+--- Recebido +CPIN: ---
+Comando SIM PIN Query executado com sucesso.
+SIMCard pronto para uso. Não requer PIN code.
+
+
+-------------------------------------------
+
+Enviado: AT+COPS=0
+
+--- Recebido OK ---
+Comando 'selecionar rede automaticamente' executado com sucesso.
+
+
+-------------------------------------------
+
+Enviado: AT+QNWPREFCFG="mode_pref",NR5G
+
+--- Recebido OK ---
+Comando Set 5G SA executado com sucesso.
+---Em que banda você quer ancorar seu UE nesse momento?
+(A) - n78
+(B) - n41
+(C) - n77
+(D) - Outra
+Digite A, B, C ou D: a
+
+
+-------------------------------------------
+
+Enviado: AT+QNWPREFCFG= "nr5g_band",78
+
+--- Recebido OK ---
+Comando Use Band 78 Only executado com sucesso.
+
+--------------------------------------------------------
+Qual é o MCC e o MNC registrados no SIMCard? Digite abaixo o MCC.
+MCC: 001
+MNC: 01
+
+
+-------------------------------------------
+
+Enviado: AT+CFUN=0
+
+--- Recebido OK ---
+Comando Radio Off executado com sucesso. Aguarde 2 segundos para o UE desligar o rádio.
+
+
+-------------------------------------------
+
+Enviado: AT+CFUN=1
+
+--- Recebido OK ---
+Comando Radio On executado com sucesso. Aguarde 10 segundos para o UE ligar o rádio.
+
+
+-------------------------------------------
+
+Enviado: AT+QNETRC?
+
+--- Recebido OK ---
+Comando Cause Network Rejection Query executado com sucesso.
+Resultado: Sem problema.
+
+
+-------------------------------------------
+
+Enviado: AT+C5GREG?
+
+--- Recebido OK ---
+Comando Registration Status Query executado com sucesso.
+Campo <stat> encontrado (status de registro na rede): 0
+  Significado: 0 = Não registrado. O UE não está procurando por operador para se registrar. Tente novamente.
+
+
+-------------------------------------------
+
+Enviado: AT+QPOWD=1
+
+--- Recebido POWERED DOWN ---
+Comando Power Off executado com sucesso.
+Fechando porta...OK!
+
+Script done on 2025-11-21 14:11:28-03:00 [COMMAND_EXIT_CODE="1"]

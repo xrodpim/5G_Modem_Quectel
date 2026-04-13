@@ -1,0 +1,15 @@
+------------------------------------------------------------------------------
+
+# Use these files to configure OpenAir Interface when using the USRP B210.
+Example: there are files for 5G signals operating on bands 78, 77, and 41.
+These files can directly replace the original OAI configuration files.
+
+Rodrigo = 10/17/2025
+
+------------------------------------------------------------------------------
+
+# Adjustments made to the Band 77 configuration file (ARFCN updated)
+
+Rilbert = 10/20/2025
+
+------------------------------------------------------------------------------
